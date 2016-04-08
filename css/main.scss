@@ -1958,3 +1958,10 @@ b.currentPosition {
 .hidden {
 	display: none;
 }
+
+.page-layout {
+    h3 {
+        text-transform: none;
+		letter-spacing: initial;
+    }
+}
