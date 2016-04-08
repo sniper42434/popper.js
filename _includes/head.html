@@ -10,6 +10,12 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
 
+    <script>
+if (window.location.href.indexOf('/popper.js') !== -1) {
+    window.location.href = "{{page.url}}" + window.location.pathname
+}
+  </script>
+
     <meta property="og:title" content="{{ site.title | escape }}">
     <meta property="og:description" content="{{ site.description | strip_html | strip_newlines }}">
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
