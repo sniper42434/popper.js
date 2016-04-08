@@ -1,6 +1,6 @@
 <div class="rel" id="example10reference1">
     <p class="bold">Hey!</p>
-    <p class="thin">Choose where put your popper!</p>
+    <p class="thin">Choose where to put your popper!</p>
     <select id="example10positionSelector">
         <option value="top">Top</option>
         <option value="right">Right</option>
@@ -14,13 +14,20 @@
     <div class="popper__arrow" x-arrow></div>
 </div>
 
+<style>
+    #example10positionSelector {
+        margin-top: 1em;
+    }
+</style>
+
 <script>
 
 document.addEventListener('DOMContentLoaded', function(){
     var index = 0;
+    var popper;
 
-    $('#example10positionSelector').on('change', attachPopper);
-    
+    $('#example10positionSelector').on('change', attachPopper).trigger('change');
+
     // Stop autoflip popper when the user click on the dropdown
     $('#example10positionSelector').on('click', function() {
         clearInterval(autoPopperFunctionTimer);
@@ -59,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function(){
         //Position for the code example
         document.getElementById('example10code').getElementsByClassName('s1')[0].textContent = "'" + position + "'";
 
-        var popper = new Popper(example10reference1, example10popper1, {
+        popper && popper.destroy();
+        popper = new Popper(example10reference1, example10popper1, {
             placement: position,
             boundariesElement: example10reference1.parentNode
         });
