@@ -1970,4 +1970,14 @@ b.currentPosition {
         display: block;
         border: 0;
     }
+    .anchor {
+        position: absolute;
+        margin-left: -25px;
+        border: 0;
+		opacity: 0;
+		width: 30px;
+    }
+	*:hover > .anchor {
+		opacity: 1;
+	}
 }

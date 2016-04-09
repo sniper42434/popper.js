@@ -157,6 +157,7 @@ description: Learn how to create awesome poppers
 {% assign name =  fn.name | split: '.' %}
 <a name="{{class.constructor.name}}.{{namespace.name}}.{{name.last}}"></a>
 <h3  id="{{ class.constructor.name | downcase }}{{namespace.name}}{{name.last | downcase }}">
+    <a href="#{{class.constructor.name}}.{{namespace.name}}.{{name.last}}" class="anchor"><i class="fa fa-link"></i></a>
     {{class.constructor.name}}.{{namespace.name}}.{{name.last}}({{ fn.parameters | map: 'name' | join: ',' }})
 
     {% if fn.returns %}
