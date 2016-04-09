@@ -1964,4 +1964,10 @@ b.currentPosition {
         text-transform: none;
 		letter-spacing: initial;
     }
+    a[name]:not([href]) {
+        top: -120px;
+        position: relative;
+        display: block;
+        border: 0;
+    }
 }
