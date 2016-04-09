@@ -11,7 +11,7 @@ description: Learn how to create awesome poppers
 
 <!-- INDEX -->
 {% for class in site.data.documentation.classes %}
-<a name="{{ class.name | downcase }}"></a>
+<a name="{{ class.name }}"></a>
 <h2 id="{{ class.name | downcase }}">{{ class.name }}</h2>
 <ul>
     <li>
@@ -70,6 +70,7 @@ description: Learn how to create awesome poppers
 </ul>
 {% endfor %}
 
+<hr>
 
 <!-- DOCS -->
 {% for class in site.data.documentation.classes %}
@@ -144,6 +145,13 @@ description: Learn how to create awesome poppers
 {% endfor %}
 
 {% for namespace in class.namespaces %}
+<hr>
+<a name="{{class.constructor.name}}.{{namespace.name}}"></a>
+<h3>
+    {{class.constructor.name}}.{{namespace.name}}
+</h3>
+<p>{{namespace.description | markdownify }}</p>
+
 {% for fn in namespace.functions %}
 {% unless fn.access == 'private' %}
 {% assign name =  fn.name | split: '.' %}
