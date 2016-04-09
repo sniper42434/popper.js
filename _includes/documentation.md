@@ -1,10 +1,10 @@
 <a name="Popper"></a>
 
 ## Popper
-**Kind**: global class
+**Kind**: global class  
 
 * [Popper](#Popper)
-    * [new Popper(triger, popper, options)](#new_Popper_new)
+    * [new Popper(trigger, popper, options)](#new_Popper_new)
     * _instance_
         * [.destroy()](#Popper+destroy)
         * [.update()](#Popper+update)
@@ -25,13 +25,13 @@
 
 <a name="new_Popper_new"></a>
 
-### new Popper(triger, popper, options)
+### new Popper(trigger, popper, options)
 Create a new Popper.js instance
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| triger | <code>HTMLElement</code> |  |  |
+| trigger | <code>HTMLElement</code> |  |  |
 | popper | <code>HTMLElement</code> &#124; <code>Object</code> |  | The HTML element used as popper, or a configuration used to generate the popper. |
 | [popper.tagName] | <code>String</code> | <code>&#x27;div&#x27;</code> | The tag name of the generated popper. |
 | [popper.classNames] | <code>Array</code> | <code>[&#x27;popper&#x27;]</code> | Array of classes to apply to the generated popper. |
@@ -58,23 +58,23 @@ Create a new Popper.js instance
 ### popper.destroy()
 Destroy the popper
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
 <a name="Popper+update"></a>
 
 ### popper.update()
 Updates the position of the popper, computing the new offsets and applying the new style
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
 <a name="Popper+onCreate"></a>
 
 ### popper.onCreate(callback)
 If a function is passed, it will be executed after the initialization of popper with as first argument the Popper instance.
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
 
 | Param | Type |
 | --- | --- |
-| callback | <code>function</code> |
+| callback | <code>function</code> | 
 
 <a name="Popper+onUpdate"></a>
 
@@ -82,44 +82,44 @@ If a function is passed, it will be executed after the initialization of popper 
 If a function is passed, it will be executed after each update of popper with as first argument the set of coordinates and informations
 used to style popper and its arrow.
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
 
 | Param | Type |
 | --- | --- |
-| callback | <code>function</code> |
+| callback | <code>function</code> | 
 
 <a name="Popper+parse"></a>
 
 ### popper.parse()
 Helper used to generate poppers from a configuration file
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
 <a name="Popper+runModifiers"></a>
 
 ### popper.runModifiers(data, modifiers, ends)
 Loop trough the list of modifiers and run them in order, each of them will then edit the data object
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
-**Access:** public
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
+**Access:** public  
 
 | Param | Type |
 | --- | --- |
-| data | <code>Object</code> |
-| modifiers | <code>Array</code> |
-| ends | <code>function</code> |
+| data | <code>Object</code> | 
+| modifiers | <code>Array</code> | 
+| ends | <code>function</code> | 
 
 <a name="Popper+isModifierRequired"></a>
 
 ### popper.isModifierRequired()
 Helper used to know if the given modifier depends from another one.
 
-**Kind**: instance method of <code>[Popper](#Popper)</code>
+**Kind**: instance method of <code>[Popper](#Popper)</code>  
 <a name="Popper.modifiers"></a>
 
 ### Popper.modifiers : <code>object</code>
 Modifiers list
 
-**Kind**: static namespace of <code>[Popper](#Popper)</code>
+**Kind**: static namespace of <code>[Popper](#Popper)</code>  
 
 * [.modifiers](#Popper.modifiers) : <code>object</code>
     * [.Popper#modifiers.applyStyle(data)](#Popper.modifiers.Popper+modifiers.applyStyle) ⇒ <code>Object</code>
@@ -135,8 +135,8 @@ Modifiers list
 #### modifiers.Popper#modifiers.applyStyle(data) ⇒ <code>Object</code>
 Apply the computed styles to the popper element
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The same data object
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The same data object  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -147,8 +147,8 @@ Apply the computed styles to the popper element
 #### modifiers.Popper#modifiers.shift(data) ⇒ <code>Object</code>
 Modifier used to shift the popper on the start or end of its reference element side
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The data object, properly modified
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The data object, properly modified  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -159,8 +159,8 @@ Modifier used to shift the popper on the start or end of its reference element s
 #### modifiers.Popper#modifiers.preventOverflow(data) ⇒ <code>Object</code>
 Modifier used to make sure the popper does not overflows from it's boundaries
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The data object, properly modified
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The data object, properly modified  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -171,8 +171,8 @@ Modifier used to make sure the popper does not overflows from it's boundaries
 #### modifiers.Popper#modifiers.keepTogether(data) ⇒ <code>Object</code>
 Modifier used to make sure the popper is always near its trigger
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The data object, properly modified
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The data object, properly modified  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -185,8 +185,8 @@ Modifier used to flip the placement of the popper when the latter is starting ov
 Requires the `preventOverflow` modifier before it in order to work.
 **NOTE:** This modifier will run all its previous modifiers everytime it tries to flip the popper!
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The data object, properly modified
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The data object, properly modified  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -198,8 +198,8 @@ Requires the `preventOverflow` modifier before it in order to work.
 Modifier used to add an offset to the popper, useful if you more granularity positioning your popper.
 The offsets will shift the popper on the side of its trigger element.
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The data object, properly modified
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The data object, properly modified  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -211,8 +211,8 @@ The offsets will shift the popper on the side of its trigger element.
 Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the trigger
 It will use the CSS outer size of the arrow element to know how many pixels of conjuction are needed
 
-**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>
-**Returns**: <code>Object</code> - The data object, properly modified
+**Kind**: static method of <code>[modifiers](#Popper.modifiers)</code>  
+**Returns**: <code>Object</code> - The data object, properly modified  
 
 | Param | Type | Description |
 | --- | --- | --- |
