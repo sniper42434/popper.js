@@ -77,7 +77,10 @@ description: Learn how to create awesome poppers
 {% capture params %}{% for param in class.constructor.parameters %}{% unless param.name contains '.' %}{{ param.name }},{% endunless %}{% endfor %}{% endcapture %}
 {% capture length %}{{ params | split: '' | size | minus: 1 }}{% endcapture %}
 <a name="new_{{ class.constructor.name }}"></a>
-<h3 id="{{ class.constructor.name | downcase }}">new {{ class.constructor.name }}({{ params | strip | slice: 0, length }})</h3>
+<h3 id="{{ class.constructor.name | downcase }}">
+    <a href="#new_{{ class.constructor.name }}" class="anchor"><i class="fa fa-link"></i></a>
+    new {{ class.constructor.name }}({{ params | strip | slice: 0, length }})
+</h3>
 <p>{{ class.constructor.description | markdownify }}</p>
 
 <!-- CONSTRUCTOR PARAMETERS -->
@@ -104,6 +107,7 @@ description: Learn how to create awesome poppers
 {% unless fn.access == 'private' %}
 <a name="{{class.constructor.name}}.{{fn.name}}"></a>
 <h3  id="{{ class.constructor.name | downcase }}{{fn.name | downcase }}">
+    <a href="#{{class.constructor.name}}.{{fn.name}}" class="anchor"><i class="fa fa-link"></i></a>
     {{class.constructor.name}}.{{fn.name}}({{ fn.parameters | map: 'name' | join: ',' }})
 
     {% if fn.returns %}
