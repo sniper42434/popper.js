@@ -134,7 +134,7 @@ description: Learn how to create awesome poppers
             <td>{{param.name}}</td>
             <td>{% for type in param.type %}<code>{{type}}</code><br>{% endfor %}</td>
             <td>{% for default in param.default %}<code>{{default}}</code><br>{% else %}<code>undefined</code><br>{% endfor %}</td>
-            <td>{{param.description | mardownify}}</td>
+            <td>{{param.description | markdownify}}</td>
         </tr>
     {% endfor %}
     </tbody>
@@ -163,7 +163,7 @@ description: Learn how to create awesome poppers
         ⇒ <code>{{fn.returns.type}}</code>
     {% endif %}
 </h3>
-<p>{{fn.description | mardownify }}</p>
+<p>{{fn.description | markdownify }}</p>
 <p>
     <strong>Kind:</strong> instance method of <code>{{namespace.name}}</code><br>
     {% if fn.access.size > 0 %}
@@ -187,7 +187,7 @@ description: Learn how to create awesome poppers
             <td>{{param.name}}</td>
             <td>{% for type in param.type %}<code>{{type}}</code><br>{% endfor %}</td>
             <td>{% for default in param.default %}<code>{{default}}</code><br>{% else %}<code>undefined</code><br>{% endfor %}</td>
-            <td>{{param.description | mardownify}}</td>
+            <td>{{param.description | markdownify}}</td>
         </tr>
     {% endfor %}
     </tbody>
