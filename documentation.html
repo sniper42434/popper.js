@@ -147,8 +147,8 @@ description: Learn how to create awesome poppers
 {% for fn in namespace.functions %}
 {% unless fn.access == 'private' %}
 {% assign name =  fn.name | split: '.' %}
-<a name="{{class.constructor.name}}.{{namespace.name}}.{{name}}"></a>
-<h3  id="{{ class.constructor.name | downcase }}{{namespace.name}}{{fn.name | downcase }}">
+<a name="{{class.constructor.name}}.{{namespace.name}}.{{name.last}}"></a>
+<h3  id="{{ class.constructor.name | downcase }}{{namespace.name}}{{name.last | downcase }}">
     {{class.constructor.name}}.{{namespace.name}}.{{name.last}}({{ fn.parameters | map: 'name' | join: ',' }})
 
     {% if fn.returns %}
