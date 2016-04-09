@@ -78,7 +78,7 @@ description: Learn how to create awesome poppers
 {% capture length %}{{ params | split: '' | size | minus: 1 }}{% endcapture %}
 <a name="new_{{ class.constructor.name }}"></a>
 <h3 id="{{ class.constructor.name | downcase }}">new {{ class.constructor.name }}({{ params | strip | slice: 0, length }})</h3>
-<p>{{ class.constructor.description }}</p>
+<p>{{ class.constructor.description | markdownify }}</p>
 
 <!-- CONSTRUCTOR PARAMETERS -->
 <table>
@@ -117,7 +117,7 @@ description: Learn how to create awesome poppers
         <strong>Access:</strong> {{fn.access}}<br>
     {% endif %}
     {% if fn.returns %}
-        <strong>Returns:</strong> <code>{{fn.returns.type}}</code> - {{fn.returns.description}}<br>
+        <strong>Returns:</strong> <code>{{fn.returns.type}}</code> - {{fn.returns.description | markdownify}}<br>
     {% endif %}
 </p>
 {% if fn.parameters.size > 0 %}
